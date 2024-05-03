@@ -30,7 +30,6 @@ def add_new_subsidiary(db_cursor, company_name, subsidiary_name):
         """, (company_name, subsidiary_name))
     except sqlite3.IntegrityError:
         print(f"Subsidiary or company ({company_name}, {subsidiary_name}) already exists.")
-        # Optionally add logic to update the entry if desired
 
 
 def update_subsidiary(db_cursor, old_name, new_name):
